@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 import {
   StyledTextContainer,
@@ -14,7 +14,6 @@ import {
   StyledSectionHeading,
 } from "../../components/Typography/elements";
 
-
 export const Hero = ({ items, image, title, description, ...props }) => {
   return (
     <StyledContainer {...props}>
@@ -26,7 +25,16 @@ export const Hero = ({ items, image, title, description, ...props }) => {
           <StyledDescription>{description}</StyledDescription>
         </StyledSectionHeading>
       </StyledTextContainer>
-    
+      <StyledSectionContainer>
+        <StyledVideoContainer>
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={image.width}
+            height={image.height}
+          />
+        </StyledVideoContainer>
+      </StyledSectionContainer>
     </StyledContainer>
   );
 };
