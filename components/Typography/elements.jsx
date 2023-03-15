@@ -20,7 +20,7 @@ export const StyledSectionSubheading = styled(forwardRef((props, ref) => <h3 {..
   font-family: Poppins;
   font-size: 1.25rem;
   line-height: 1.875rem;
-  font-weight: 300;
+  font-weight: ${props => props.fontWeight || 300};
 `;
 
 export const StyledSectionInnerHeading = styled(forwardRef((props, ref) => <h4 {...props} ref={ref} />))`
