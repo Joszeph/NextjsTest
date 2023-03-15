@@ -1,28 +1,30 @@
 import {
-    StyledContainer,
-    StyledImageContainer,
-    StyledTextContainer,
-    StyledTitle,
-    StyledWrapper,
-  } from "./elements";
-  
-  import Image from "next/image";
-  
-  import {
-    StyledSectionSubheading,
-    StyledSectionParagraph,
-  } from "../Typography/elements";
-  
-  export const Item = ({ item, width, backgroundColor }) => {
-    const boldDescription = item.description
-      .replace(
-        "brief writing or simple guidance",
-        "<strong>brief writing or simple guidance</strong>"
-      )
-      .replace("criteria matching", "<strong>criteria matching</strong>")
-      .replace("pitch management", "<strong>pitch management</strong>");
-  
-    return (
+  StyledContainer,
+  StyledImageContainer,
+  StyledTextContainer,
+  StyledTitle,
+  StyledWrapper,
+} from "./elements";
+
+import Image from "next/image";
+import Link from "next/link";
+
+import {
+  StyledSectionSubheading,
+  StyledSectionParagraph,
+} from "../Typography/elements";
+
+export const Item = ({ item, width, backgroundColor, link="" }) => {
+  const boldDescription = item.description
+    .replace(
+      "brief writing or simple guidance",
+      "<strong>brief writing or simple guidance</strong>"
+    )
+    .replace("criteria matching", "<strong>criteria matching</strong>")
+    .replace("pitch management", "<strong>pitch management</strong>");
+
+  return (
+    <Link href={link}>
       <StyledContainer width={width} backgroundColor={backgroundColor}>
         <StyledWrapper>
           <StyledImageContainer>
@@ -42,10 +44,12 @@ import {
                 {item.title}
               </StyledSectionSubheading>
             </StyledTitle>
-            <StyledSectionParagraph dangerouslySetInnerHTML={{ __html: boldDescription }} />
+            <StyledSectionParagraph
+              dangerouslySetInnerHTML={{ __html: boldDescription }}
+            />
           </StyledTextContainer>
         </StyledWrapper>
       </StyledContainer>
-    );
-  };
-  
+    </Link>
+  );
+};

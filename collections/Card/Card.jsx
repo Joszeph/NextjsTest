@@ -12,6 +12,7 @@ export const Card = ({ items, children, ...props }) => {
             item={item}
             width={item.width}
             backgroundColor={item.backgroundColor}
+            link={item.link}
           />
         ))}
       </StyledWrapper>

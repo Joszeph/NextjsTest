@@ -13,7 +13,8 @@ const items = [
     description:
       "Complete brief writing or simple guidance on what to include, we've got you covered.",
       width:'434',
-      backgroundColor: '#f9f9f9'
+      backgroundColor: '#f9f9f9',
+      link:'https://goodbrief.io/'
   },
   {
     image: { src: "/img/icon2.png", alt: "", width: 55, height: 55 },

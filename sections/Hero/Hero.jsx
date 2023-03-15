@@ -40,7 +40,6 @@ export const Hero = ({ items, image, title, description, ...props }) => {
         </StyledVideoContainer>
         <Card items={items} />
       </StyledSectionContainer>
-
     </StyledContainer>
   );
 };
