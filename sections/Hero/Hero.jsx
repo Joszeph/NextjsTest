@@ -3,26 +3,30 @@ import Image from "next/image";
 import {
   StyledTextContainer,
   StyledContainer,
-  StyledGetStartedBtn,
   StyledTitle,
   StyledDescription,
-  StyledCTAContainer,
-  StyledImageContainer,
+  StyledSectionContainer,
+  StyledVideoContainer,
 } from "./elements";
 
-export const Hero = ({ image, title, description, ctaText, ...props }) => {
+import {
+  StyledSectionBigHeading,
+  StyledSectionHeading,
+} from "../../components/Typography/elements";
+
+
+export const Hero = ({ items, image, title, description, ...props }) => {
   return (
     <StyledContainer {...props}>
       <StyledTextContainer>
-        <StyledTitle>{title}</StyledTitle>
-        <StyledDescription>{description}</StyledDescription>
-        <StyledCTAContainer>
-          <StyledGetStartedBtn>{ctaText}</StyledGetStartedBtn>
-        </StyledCTAContainer>
+        <StyledTitle>
+          <StyledSectionBigHeading>{title}</StyledSectionBigHeading>
+        </StyledTitle>
+        <StyledSectionHeading>
+          <StyledDescription>{description}</StyledDescription>
+        </StyledSectionHeading>
       </StyledTextContainer>
-      <StyledImageContainer>
-        <Image layout="responsive" src={image.src} alt={image.alt} width={image.width} height={image.height} />
-      </StyledImageContainer>
+    
     </StyledContainer>
   );
 };
