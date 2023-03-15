@@ -9,7 +9,7 @@ const heroProps = {
 const items = [
   {
     image: { src: "/img/icon1.png", alt: "", width: 55, height: 55 },
-    title: "Breaf",
+    title: "Brief",
     description:
       "Complete brief writing or simple guidance on what to include, we've got you covered.",
       width:'434',
