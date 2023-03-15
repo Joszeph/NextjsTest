@@ -20,7 +20,6 @@ import {
 export const Hero = ({ items, image, title, description, ...props }) => {
   return (
     <StyledContainer {...props}>
-
      <StyledTextContainer>
         <StyledTitle>
           <StyledSectionBigHeading>{title}</StyledSectionBigHeading>

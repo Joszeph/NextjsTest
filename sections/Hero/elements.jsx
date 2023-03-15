@@ -9,9 +9,20 @@ export const StyledContainer = styled(({ height, ...props }) => (
   <SectionContainer {...props} />
 ))`
   align-items: center;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  
+  background-image: url("/img/background.png");
+  background-repeat: no-repeat;
+  background-size: 61%;
+  background-position: 26% 172%;
+  @media screen and (max-width: 1540px) {
+    background-size: 75%;
+    background-position: 10% 161%;
+  }
+  @media screen and (max-width: 1024px) {
+    background-size: 124%;
+    background-position: 19% 25%;
+  }
 `;
 
 export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
