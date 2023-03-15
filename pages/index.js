@@ -6,6 +6,33 @@ const heroProps = {
   description: "Stengthen your onboarding process",
 };
 
+const items = [
+  {
+    image: { src: "/img/icon1.png", alt: "", width: 55, height: 55 },
+    title: "Breaf",
+    description:
+      "Complete brief writing or simple guidance on what to include, we've got you covered.",
+      width:'434',
+      backgroundColor: '#f9f9f9'
+  },
+  {
+    image: { src: "/img/icon2.png", alt: "", width: 55, height: 55 },
+    title: "Search",
+    description:
+      "In-depth agensy search covering; criteria matching, door knocking and due-dilligence vetting.",
+      width:'460',
+      backgroundColor:'#f4f4f4'
+  },
+  {
+    image: { src: "/img/icon3.png", alt: "", width: 55, height: 55 },
+    title: "Pitch",
+    description:
+      "Comprehensive, pitch management, icluding, diary management and pitch hosting.",
+      width:'490',
+      backgroundColor:'#f1f1f1'
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -18,7 +45,7 @@ export default function Home() {
         />
       </head>
       <div>
-        <Hero {...heroProps} />
+        <Hero {...heroProps} items={items}/>
       </div>
     </>
   );

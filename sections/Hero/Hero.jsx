@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+import {Card}  from "../../collections/Card/Card" 
+
 import {
   StyledTextContainer,
   StyledContainer,
@@ -34,6 +36,7 @@ export const Hero = ({ items, image, title, description, ...props }) => {
             height={image.height}
           />
         </StyledVideoContainer>
+        <Card items={items} />
       </StyledSectionContainer>
     </StyledContainer>
   );

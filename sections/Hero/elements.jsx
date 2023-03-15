@@ -9,6 +9,8 @@ export const StyledContainer = styled(({ height, ...props }) => (
   <SectionContainer {...props} />
 ))`
   align-items: center;
+  display:flex;
+  flex-direction: column;
 `;
 
 export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
