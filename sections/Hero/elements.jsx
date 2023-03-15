@@ -11,6 +11,7 @@ export const StyledContainer = styled(({ height, ...props }) => (
   align-items: center;
   display:flex;
   flex-direction: column;
+  
 `;
 
 export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
@@ -40,6 +41,11 @@ export const StyledSectionContainer = styled(({ ...props }) => (
   margin: 0 auto;
   display: flex;
   gap: 70px;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    margin: -42px 0 0 0;
+  }
 `;
 
 export const StyledVideoContainer = styled(({ ...props }) => (

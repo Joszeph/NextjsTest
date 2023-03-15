@@ -4,6 +4,7 @@ import {Card}  from "../../collections/Card/Card"
 
 import {
   StyledTextContainer,
+
   StyledContainer,
   StyledTitle,
   StyledDescription,
@@ -19,7 +20,8 @@ import {
 export const Hero = ({ items, image, title, description, ...props }) => {
   return (
     <StyledContainer {...props}>
-      <StyledTextContainer>
+
+     <StyledTextContainer>
         <StyledTitle>
           <StyledSectionBigHeading>{title}</StyledSectionBigHeading>
         </StyledTitle>
@@ -38,6 +40,7 @@ export const Hero = ({ items, image, title, description, ...props }) => {
         </StyledVideoContainer>
         <Card items={items} />
       </StyledSectionContainer>
+
     </StyledContainer>
   );
 };
