@@ -40,7 +40,7 @@ export const StyledDescription = styled((props) => (
 export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
   color: black;
   width: 100%;
-  margin: 0 auto 60px auto;
+  margin: 90px auto 60px auto;
   text-align: center;
   font-family: sans-serif;
 `;
