@@ -1,44 +1,34 @@
-import Image from 'next/image'
-
-import {Card}  from "../../collections/Card/Card" 
+import Image from "next/image";
 
 import {
   StyledTextContainer,
-
   StyledContainer,
+  StyledGetStartedBtn,
   StyledTitle,
   StyledDescription,
-  StyledSectionContainer,
-  StyledVideoContainer,
+  StyledCTAContainer,
+  StyledImageContainer,
 } from "./elements";
 
-import {
-  StyledSectionBigHeading,
-  StyledSectionHeading,
-} from "../../components/Typography/elements";
-
-export const Hero = ({ items, image, title, description, ...props }) => {
+export const Hero = ({ image, title, description, ctaText, ...props }) => {
   return (
     <StyledContainer {...props}>
-     <StyledTextContainer>
-        <StyledTitle>
-          <StyledSectionBigHeading>{title}</StyledSectionBigHeading>
-        </StyledTitle>
-        <StyledSectionHeading>
-          <StyledDescription>{description}</StyledDescription>
-        </StyledSectionHeading>
+      <StyledTextContainer>
+        <StyledTitle>{title}</StyledTitle>
+        <StyledDescription>{description}</StyledDescription>
+        <StyledCTAContainer>
+          <StyledGetStartedBtn>{ctaText}</StyledGetStartedBtn>
+        </StyledCTAContainer>
       </StyledTextContainer>
-      <StyledSectionContainer>
-        <StyledVideoContainer>
-          <Image
-            src={image.src}
-            alt={image.alt}
-            width={image.width}
-            height={image.height}
-          />
-        </StyledVideoContainer>
-        <Card items={items} />
-      </StyledSectionContainer>
+      <StyledImageContainer>
+        <Image
+          layout="responsive"
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+        />
+      </StyledImageContainer>
     </StyledContainer>
   );
 };

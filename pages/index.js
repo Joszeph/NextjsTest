@@ -1,12 +1,20 @@
-import { Hero } from "../sections";
+import { Hero } from "../sections/Hero";
+import { Main } from "../sections/Main/index";
 
 const heroProps = {
+  image: { src: "/img/heroimg.png", alt: "", width: 1000, height: 1680 },
+  title: "Agency procurement, outsourced.",
+  description: "Start the process here",
+  ctaText: "Start",
+};
+
+const mainProps = {
   image: { src: "/img/video.png", alt: "", width: 1000, height: 1680 },
   title: "Managed agency selection",
   description: "Stengthen your onboarding process",
 };
 
-const items = [
+const cards = [
   {
     image: { src: "/img/icon1.png", alt: "", width: 55, height: 55 },
     title: "Brief",
@@ -46,7 +54,8 @@ export default function Home() {
         />
       </head>
       <div>
-        <Hero {...heroProps} items={items}/>
+        <Hero {...heroProps}/>
+        <Main {...mainProps} cards={cards}/>
       </div>
     </>
   );
