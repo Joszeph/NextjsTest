@@ -14,14 +14,34 @@ import {
   StyledSectionParagraph,
 } from "../Typography/elements";
 
-export const Item = ({ item, width, backgroundColor, link="" }) => {
-  const boldDescription = item.description
-    .replace(
+export const Item = ({ item, width, backgroundColor, link = "" }) => {
+  // const boldDescription = item.description
+  //   .replace(
+  //     "brief writing or simple guidance",
+  //     "<strong>brief writing or simple guidance</strong>"
+  //   )
+  //   .replace("criteria matching", "<strong>criteria matching</strong>")
+  //   .replace("pitch management", "<strong>pitch management</strong>");
+
+  const formatDescription = (description) => {
+    const boldTexts = [
       "brief writing or simple guidance",
-      "<strong>brief writing or simple guidance</strong>"
-    )
-    .replace("criteria matching", "<strong>criteria matching</strong>")
-    .replace("pitch management", "<strong>pitch management</strong>");
+      "criteria matching",
+      "pitch management",
+    ];
+    let formattedText = description;
+    boldTexts.forEach((boldText) => {
+      const startIndex = formattedText.indexOf(boldText);
+      if (startIndex >= 0) {
+        const endIndex = startIndex + boldText.length;
+        formattedText = `${formattedText.slice(
+          0,
+          startIndex
+        )}<strong>${boldText}</strong>${formattedText.slice(endIndex)}`;
+      }
+    });
+    return formattedText;
+  };
 
   return (
     <Link href={link}>
@@ -45,7 +65,9 @@ export const Item = ({ item, width, backgroundColor, link="" }) => {
               </StyledSectionSubheading>
             </StyledTitle>
             <StyledSectionParagraph
-              dangerouslySetInnerHTML={{ __html: boldDescription }}
+              dangerouslySetInnerHTML={{
+                __html: formatDescription(item.description),
+              }}
             />
           </StyledTextContainer>
         </StyledWrapper>
