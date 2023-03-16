@@ -43,6 +43,9 @@ export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
   margin: 90px auto 60px auto;
   text-align: center;
   font-family: sans-serif;
+  @media screen and (max-width: 1024px) {
+    margin: -10px auto 60px auto;
+  }
 `;
 
 export const StyledSectionContainer = styled(({ ...props }) => (

@@ -41,7 +41,7 @@ export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
   font-family: sans-serif;
   @media screen and (max-width: 1024px) {
    margin:30px 0;
-   width: 50%;
+   width: 100%;
    text-align:center;
   }
 `;
