@@ -15,14 +15,6 @@ import {
 } from "../Typography/elements";
 
 export const Item = ({ item, width, backgroundColor, link = "" }) => {
-  // const boldDescription = item.description
-  //   .replace(
-  //     "brief writing or simple guidance",
-  //     "<strong>brief writing or simple guidance</strong>"
-  //   )
-  //   .replace("criteria matching", "<strong>criteria matching</strong>")
-  //   .replace("pitch management", "<strong>pitch management</strong>");
-
   const formatDescription = (description) => {
     const boldTexts = [
       "brief writing or simple guidance",
