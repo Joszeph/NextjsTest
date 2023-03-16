@@ -1,9 +1,11 @@
+import "@fontsource/poppins"
+
 import { ThemeProvider } from "styled-components";
 import { theme } from "~/styles";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} >
       <Component {...pageProps} />
     </ThemeProvider>
   );
